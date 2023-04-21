@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    color: white;
+    }
+
+
+/* animação para webkit */
+@-webkit-keyframes fundocor {
+  0%   {background: black;}
+  25%  {background: #02023b;}
+  50%  {background: black;}
+  100% {background: #02023b;}
+}
+
+/* animação padrão */
+@keyframes fundocor {
+  0%   {background: black;}
+  25%  {background: #02023b;}
+  50%  {background: black;}
+  100% {background: #02023b;}
+}
+
+/* executa a chamada da animação no body */
+body{
+-webkit-animation: fundocor 5s linear 2s infinite alternate; /* chamada para Chrome, Safari, Opera */
+  animation: fundocor 5s linear 2s infinite alternate; /* chamada padrão */
+}
+
+
+
+
+    html{
+  scroll-behavior: smooth;
+}
+
+
+    header {
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: black;
+        color: white;
+        font-size: 23px;
+        
+      }
+
+      #home{
+        width: 80%;
+        margin: auto;
+        margin-top: 25px;
+        height: 40px;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;   
+        font-family: 'Creepster', cursive;
+     
+      }
+      
+      #home a {
+        text-decoration: none;
+        color: white;
+        text-align: center;
+      }
+
+      #home a:hover{
+        color: #1717af;
+        }
+
+
+      .sociais{
+        width: 15%;
+        height: auto;
+        display: flex;
+        gap: 20px;
+      }
+      .imagem_inicial{
+        position: absolute;
+        display: flex;
+        width: 450px;
+        height: 550px;
+        top: 100px;
+        margin-right: 600px;
+      }
+   
+  .menininho{
+    width: 400px;
+    z-index: 3;
+    margin-top:40px;
+      }
+ 
+#texto_meio{
+    width: 100%;
+    height: 400px;
+    margin-top: 100px;
+    text-align: center;
+    font-family: 'Creepster', cursive;
+    
+}
+
+
+
+#texto_meio p {
+    width: 100%;
+    height: 100px;
+    color: white;
+    z-index: 2;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 200px;
+    font-family: 'Creepster', cursive;
+    
+}
+
+#texto_meio span{
+    width: 100%;
+    height: 100px;
+    color: white;
+    z-index: 2;
+    text-align: center;
+    font-size: 100px;
+    margin-top: 100px;
+    
+    
+}
+
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+img {
+  width: 100%;
+}
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 2em;
+  cursor: pointer;
+}
+.prev-btn {
+  left: 0;
+}
+.next-btn {
+  right: 0;
+}
+
+
+.imagens_portifolio{
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  gap: 30px;
+}
+
+#quem_sou h1{
+  font-size: 40px;
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 50px;
+  z-index: 2;
+  font-family: 'Nova Oval', cursive;
+
+}
+
+#quem_sou p{
+font-size: 16px;
+text-align: center;
+margin-bottom: 50px;
+font-family: 'Nova Oval', cursive;
+}
+
+#skills h1{
+ 
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 250px;
+  font-family: 'Nova Oval', cursive;
+
+}
+
+.icones_skills{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 80px;
+  margin-bottom: 250px;
+
+}
+
+.sociais_rodape{
+ padding: 20px;
+ height: auto;
+ display: flex;
+}
+
+.fa-brands{
+  margin-left: 30px;
+
+}
+
+.logo_rodape img{
+  width: 270px;
+  height: 270px;
+}
+
+.logo_rodape{
+  align-self: flex-end;
+}
+
+footer{
+  position: relative;
+  width: 100%;
+  height: 300px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  font-size: 40px;
+  background-color: black;
+  font-family: 'Creepster', cursive;
+
+}
+
+nav{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+#rodape a:hover{
+  color: #1717af;
+  }
+  
+  #rodape a{
+    text-decoration: none;
+    margin: 70px;
+   
+  }
