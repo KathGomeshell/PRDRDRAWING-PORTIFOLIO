@@ -1,27 +1,33 @@
-const carousel = document.querySelector('.carousel');
-const container = document.querySelector('.carousel-container');
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
+let slideIndex = 1;
+showSlides(slideIndex);
 
-let slideIndex = 0;
-const slideWidth = carousel.clientWidth;
-const slides = container.querySelectorAll('img');
-const totalSlides = slides.length;
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-container.style.width = `${slideWidth * totalSlides}px`;
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-prevBtn.addEventListener('click', () => {
-  slideIndex--;
-  if (slideIndex < 0) {
-    slideIndex = totalSlides - 1;
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
-  container.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
-});
-
-nextBtn.addEventListener('click', () => {
-  slideIndex++;
-  if (slideIndex > totalSlides - 1) {
-    slideIndex = 0;
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
   }
-  container.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
-});
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+
+
+const video = document.getElementById("my-video");
+video.play();

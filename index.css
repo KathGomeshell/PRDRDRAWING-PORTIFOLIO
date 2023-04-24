@@ -76,7 +76,7 @@ body{
         width: 15%;
         height: auto;
         display: flex;
-        gap: 20px;
+        gap: 5px;
       }
       .imagem_inicial{
         position: absolute;
@@ -87,13 +87,13 @@ body{
         margin-right: 600px;
       }
    
-  .menininho{
-    width: 400px;
-    z-index: 3;
-    margin-top:40px;
+      .menininho{
+       width: 400px;
+       z-index: 3;
+      margin-top:40px;
       }
  
-#texto_meio{
+    #texto_meio{
     width: 100%;
     height: 400px;
     margin-top: 100px;
@@ -104,7 +104,7 @@ body{
 
 
 
-#texto_meio p {
+    #texto_meio p {
     width: 100%;
     height: 100px;
     color: white;
@@ -116,7 +116,7 @@ body{
     
 }
 
-#texto_meio span{
+    #texto_meio span{
     width: 100%;
     height: 100px;
     color: white;
@@ -129,35 +129,109 @@ body{
 }
 
 
-.carousel {
-  position: relative;
-  overflow: hidden;
-}
-.carousel-container {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-img {
-  width: 100%;
-}
-.prev-btn,
-.next-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: transparent;
-  border: none;
-  color: #fff;
-  font-size: 2em;
-  cursor: pointer;
-}
-.prev-btn {
-  left: 0;
-}
-.next-btn {
-  right: 0;
+* {box-sizing:border-box}
+
+
+  #artes{
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 80px;
+  font-size: 40px;
+  font-family: 'Creepster', cursive;
+  
+
 }
 
+/* Slideshow container */
+.slideshow-container {
+  margin-top: 300px;
+  width: 50%;
+  height: auto;
+  position: relative;
+  margin: auto;
+}
+
+/* Ocultar as imagens por padrão */
+.mySlides {
+  display: none;
+}
+
+/* Botões Próximo e Anterior */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Posicione o "botão seguinte" à direita */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Ao passar o mouse, adicione uma cor de fundo preta com um pouco de transparência */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Texto da legenda*/
+.text {
+ font-family: 'Nova Oval', cursive;
+  display: inline-block;
+  color: #000;
+  background-color: #3535ca;
+  font-size: 25px;
+  padding: 8px 12px;
+  position: relative;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Texto numérico (1/3, etc.) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Os pontos/balas/indicadores*/
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Animação desaparecendo*/
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
 
 .imagens_portifolio{
   text-align: center;
@@ -167,13 +241,35 @@ img {
   gap: 30px;
 }
 
+
+.processo h1{
+  text-align: center;
+  font-family: 'Creepster', cursive;
+  font-size: 50px;
+  margin-top: 100px;
+
+}
+
+
+#my-video {
+  width: 80%;
+  height: auto;
+  margin-left: 150px;
+  margin-top: 50px;
+}
+
+
+
+
+
+
+
 #quem_sou h1{
-  font-size: 40px;
+  font-size: 60px;
   text-align: center;
   margin-top: 150px;
   margin-bottom: 50px;
-  z-index: 2;
-  font-family: 'Nova Oval', cursive;
+  font-family: 'Creepster', cursive;
 
 }
 
@@ -182,15 +278,20 @@ font-size: 16px;
 text-align: center;
 margin-bottom: 50px;
 font-family: 'Nova Oval', cursive;
+
+}
+
+.pedro{
+  margin-left: 360px;
 }
 
 #skills h1{
  
-  font-size: 40px;
+  font-size: 60px;
   text-align: center;
   margin-bottom: 50px;
   margin-top: 250px;
-  font-family: 'Nova Oval', cursive;
+  font-family: 'Creepster', cursive;
 
 }
 
@@ -200,6 +301,7 @@ font-family: 'Nova Oval', cursive;
   flex-direction: row;
   gap: 80px;
   margin-bottom: 250px;
+  margin-left: 370px;
 
 }
 
@@ -210,7 +312,7 @@ font-family: 'Nova Oval', cursive;
 }
 
 .fa-brands{
-  margin-left: 30px;
+  margin-left: 27px;
 
 }
 
@@ -233,7 +335,7 @@ footer{
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  font-size: 40px;
+  font-size: 22px;
   background-color: black;
   font-family: 'Creepster', cursive;
 
